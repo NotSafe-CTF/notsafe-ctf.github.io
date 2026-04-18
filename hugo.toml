@@ -1,6 +1,6 @@
 baseURL = "https://notsafe-ctf.github.io/"
 languageCode = "en-us"
-title = "l30 | Security Research"
+title = "NotSaf$ | Security Research"
 paginate = 10
 
 [params]
