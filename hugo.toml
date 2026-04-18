@@ -6,7 +6,7 @@ paginate = 10
 [params]
   author = "NotSaf$"
   description = "CTF player · Reverse Engineer · Binary Exploitation"
-  github = "https://github.com/NotSafe-CTF"
+  github = "https://notsafe-ctf.github.io"
   twitter = ""
   email = ""
   keywords = ["CTF", "reverse engineering", "binary exploitation", "pwn", "security research"]
