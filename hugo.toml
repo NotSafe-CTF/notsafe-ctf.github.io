@@ -1,4 +1,4 @@
-baseURL = "https://notsafe.github.io/"
+baseURL = "https://notsafe-ctf.github.io/"
 languageCode = "en-us"
 title = "l30 | Security Research"
 paginate = 10
