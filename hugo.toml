@@ -1,0 +1,25 @@
+baseURL = "https://notsafe.github.io/"
+languageCode = "en-us"
+title = "l30 | Security Research"
+theme = ""
+paginate = 10
+
+[params]
+  author = "NotSaf$"
+  description = "CTF player · Reverse Engineer · Binary Exploitation"
+  github = "https://github.com/NotSafe-CTF"
+  twitter = ""
+  email = ""
+  keywords = ["CTF", "reverse engineering", "binary exploitation", "pwn", "security research"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = true
+    lineNumbersInTable = false
+  [markup.goldmark.renderer]
+    unsafe = true

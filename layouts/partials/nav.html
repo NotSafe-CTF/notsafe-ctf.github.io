@@ -1,0 +1,10 @@
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span>l</span>30<span>_</span></a>
+    <ul class="nav-links">
+      <li><a href="/"         {{ if .IsHome }}class="active"{{ end }}>Home</a></li>
+      <li><a href="/whoami/"  {{ if eq .RelPermalink "/whoami/" }}class="active"{{ end }}>Who I am</a></li>
+      <li><a href="/writeups/"{{ if hasPrefix .RelPermalink "/writeups" }}class="active"{{ end }}>Write-ups</a></li>
+    </ul>
+  </div>
+</nav>

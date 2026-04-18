@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="wrapper">
+
+  <div class="writeups-header">
+    <p class="hero-eyebrow">all write-ups</p>
+    <h1 class="hero-title" style="font-size:clamp(1.6rem,4vw,2.4rem)">
+      {{ len .Pages }} challenge{{ if ne (len .Pages) 1 }}s{{ end }} documented<span class="cursor"></span>
+    </h1>
+  </div>
+
+  <!-- Filter buttons (JS-powered) -->
+  <div class="writeups-filter">
+    <button class="filter-btn active" data-filter="all">all</button>
+    <button class="filter-btn" data-filter="pwn">pwn</button>
+    <button class="filter-btn" data-filter="rev">rev</button>
+    <button class="filter-btn" data-filter="crypto">crypto</button>
+    <button class="filter-btn" data-filter="misc">misc</button>
+  </div>
+
+  <div class="writeup-list" id="writeup-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <a class="writeup-card" href="{{ .RelPermalink }}" data-category="{{ lower (default "misc" .Params.category) }}">
+      <span class="writeup-date">{{ .Date.Format "2006-01-02" }}</span>
+      <div class="writeup-info">
+        <div class="writeup-title">{{ .Title }}</div>
+        <div class="writeup-meta">
+          {{ with .Params.ctf }}<span class="ctf-name">{{ . }}</span> · {{ end }}
+          {{ with .Params.category }}<span>{{ . }}</span>{{ end }}
+          {{ with .Params.difficulty }} · <span>{{ . }}</span>{{ end }}
+          {{ with .Params.points }} · <span>{{ . }} pts</span>{{ end }}
+        </div>
+      </div>
+      <span class="writeup-arrow">→</span>
+    </a>
+    {{ else }}
+    <p style="color:var(--text-muted);font-size:.85rem;padding:20px 0;">
+      No write-ups yet — add a <code>.md</code> file in <code>content/writeups/</code>.
+    </p>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}

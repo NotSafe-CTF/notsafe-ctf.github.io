@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="wrapper">
+
+  <div class="single-header">
+    <div class="single-breadcrumb">
+      <a href="/">home</a>
+      <span>/</span>
+      <a href="/writeups/">write-ups</a>
+      <span>/</span>
+      {{ .Title }}
+    </div>
+
+    <h1 class="single-title">{{ .Title }}</h1>
+
+    <div class="single-meta">
+      <div class="meta-item">📅 {{ .Date.Format "January 2, 2006" }}</div>
+      {{ with .Params.ctf }}<div class="meta-item">🏆 <span>{{ . }}</span></div>{{ end }}
+      {{ with .Params.category }}<div class="meta-item">🏷 <span>{{ . }}</span></div>{{ end }}
+      {{ with .Params.difficulty }}<div class="meta-item">💀 <span>{{ . }}</span></div>{{ end }}
+      {{ with .Params.points }}<div class="meta-item">⭐ <span>{{ . }} pts</span></div>{{ end }}
+      {{ with .ReadingTime }}<div class="meta-item">⏱ {{ . }} min read</div>{{ end }}
+    </div>
+  </div>
+
+  <article class="article-body">
+    {{ .Content }}
+  </article>
+
+  <!-- Nav between posts -->
+  <nav style="display:flex;justify-content:space-between;padding:32px 0;border-top:1px solid var(--border-dim);font-size:.8rem;">
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" style="color:var(--text-muted);">← {{ .Title }}</a>
+    {{ else }}<span></span>{{ end }}
+
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" style="color:var(--text-muted);">{{ .Title }} →</a>
+    {{ end }}
+  </nav>
+
+</div>
+{{ end }}
