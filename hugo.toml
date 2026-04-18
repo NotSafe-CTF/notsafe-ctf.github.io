@@ -1,7 +1,6 @@
 baseURL = "https://notsafe.github.io/"
 languageCode = "en-us"
 title = "l30 | Security Research"
-theme = ""
 paginate = 10
 
 [params]
