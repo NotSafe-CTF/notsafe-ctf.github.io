@@ -42,9 +42,9 @@ description: "CTF player, reverse engineer, binary exploitation researcher"
     <div class="skill-grid">
       <div class="skill-item"><span class="skill-dot"></span>Binary Exploitation</div>
       <div class="skill-item"><span class="skill-dot red"></span>Reverse Engineering</div>
-      <div class="skill-item"><span class="skill-dot cyan"></span>pwntools / pwndbg</div>
+      <div class="skill-item"><span class="skill-dot cyan"></span>pwntools</div>
       <div class="skill-item"><span class="skill-dot purple"></span>x86-64 Assembly</div>
-      <div class="skill-item"><span class="skill-dot yellow"></span>C / Python</div>
+      <div class="skill-item"><span class="skill-dot yellow"></span>C / Python / Rust (work in progress)</div>
       <div class="skill-item"><span class="skill-dot red"></span>pwndbg / Ghidra</div>
     </div>
   </div>
