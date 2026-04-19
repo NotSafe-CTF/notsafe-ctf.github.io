@@ -14,11 +14,11 @@ description: "CTF player, reverse engineer, binary exploitation researcher"
   </div>
   <div class="stat-box">
     <div class="stat-label">Twitter</div>
-    <div class="stat-value"></div>
+    <div class="stat-value">_NotSafe__</div>
   </div>
   <div class="stat-box">
     <div class="stat-label">discord</div>
-    <div class="stat-value"></div>
+    <div class="stat-value">notsafe___</div>
   </div>
 </div>
 
@@ -68,7 +68,7 @@ description: "CTF player, reverse engineer, binary exploitation researcher"
       <div class="skill-item"><span class="skill-dot red"></span>OSED (target)</div>
       <div class="skill-item"><span class="skill-dot cyan"></span>GREM (target)</div>
       <div class="skill-item"><span class="skill-dot purple"></span>CRTO (target)</div>
-      <div class="skill-item"><span class="skill-dot yellow"></span>Master's Degree in Cybersecurity Engineering </div>
+      <div class="skill-item"><span class="skill-dot yellow"></span>Master's Degree in Cybersecurity Engineering (target)</div>
     </div>
   </div>
 
