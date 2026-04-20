@@ -27,8 +27,8 @@ description: "CTF player, reverse engineer, binary exploitation researcher"
   <div class="who-block">
     <div class="who-block-title">about</div>
     <p>
-      Hi, I'm Leonardo Massa, an Italian cybersecurity enthusiast, CTF player, and cybersecurity researcher. 
-      I'm passionate about reverse engineering, binary exploitation and exploitation in general.
+      Hi, I'm Leonardo Massa, a 17 years old Italian guy who defines himeslf as a cybersecurity enthusiast, CTF player, and cybersecurity researcher. 
+      I'm passionate about reverse engineering, binary exploitation and exploit development.
       This blog is where I document what I learn: CTF write-ups, vulnerability research
       notes, and the occasional deep-dive into assembly or operating system internals.
     </p>
