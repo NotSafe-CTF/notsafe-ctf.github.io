@@ -174,6 +174,7 @@ MOV AL, 0
 
 As explained in the reasoning section, the exploit follows a fixed pattern for each character.
 Let's look at the implementation:
+
 *This can be written more concisely, but I kept it verbose for clarity.*
 
 ```python3
