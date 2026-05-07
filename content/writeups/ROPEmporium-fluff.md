@@ -21,16 +21,16 @@ $ strings ./fluff
 pwnme
 print_file
 main
-# (output abbreviated)
+#(output abbreviated)
 ```
 The strings command reveals three key functions: main(), pwnme(), and print_file(). We'll probably need to call print_file() with the flag filename to read its contents.
 
 Next, we check the binary format and protections:
 ```bash
 $ file ./fluff
-...
-./fluff: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=2b14d9e5fb7a6bcac48b5304b5153fc679c3651c, not stripped
-...
+
+./fluff: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, 
+interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=2b14d9e5fb7a6bcac48b5304b5153fc679c3651c, not stripped
 ```
 The binary is a simple ELF 64-bit file dynamically linked to the normal linux interpreter "/lib64/ld-linux-x86-64.so.2"
 
@@ -49,7 +49,7 @@ static   false
 stripped false
 subsys   linux
 va       true
-# (output abbreviated)
+#(output abbreviated)
 ```
 One important thing to notice is that the NX is enabled, meaning the stack is non-executable. We cannot execute shellcode directly from the stack, we must use ROP (Return Oriented Programming) to chain existing gadgets.
 
@@ -76,6 +76,7 @@ However, there are 3 key functions that immediately catch our attention:
 ![Ghidra analysis usefulFunction](/images/ghidra_fluff_usefulFunction.png)
 
 `questionableGadgets`:
+
 (ghidra sets this as a label because it is a mix of instructions)
 
 ![Ghidra analysis questionableGadgets](/images/ghidra_fluff_questionableGadgets.png)
