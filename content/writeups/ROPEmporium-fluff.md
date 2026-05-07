@@ -69,16 +69,16 @@ However, there are 3 key functions that immediately catch our attention:
 
 `main()`:
 
-![Ghidra analysis main](static/images/ghidra_fluff_main.png)
+![Ghidra analysis main](/images/ghidra_fluff_main.png)
 
 `usefulFunction()`:
 
-![Ghidra analysis usefulFunction](static/images/ghidra_fluff_usefulFunction.png)
+![Ghidra analysis usefulFunction](/images/ghidra_fluff_usefulFunction.png)
 
 `questionableGadgets`:
 (ghidra sets this as a label because it is a mix of instructions)
 
-![Ghidra analysis questionableGadgets](static/images/ghidra_fluff_questionableGadgets.png)
+![Ghidra analysis questionableGadgets](/images/ghidra_fluff_questionableGadgets.png)
 
 So now we know two things: how `print_file()` works, because we have the example of `usefulFunction()`,
 and how we can move data from the stack to the .bss section of the binary.
