@@ -1,6 +1,6 @@
 ---
 title: "ROPemporium — fluff"
-date: 2026-06-06
+date: 2026-05-07
 ctf: "ROPemporium"
 category: "pwn"   
 difficulty: "medium"   
