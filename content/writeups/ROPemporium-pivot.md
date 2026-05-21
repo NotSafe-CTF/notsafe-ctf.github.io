@@ -116,25 +116,25 @@ Let's take a look at the decompiled output from Ghidra to start doing some analy
 
 `main()`:
 
-![Ghidra analysis main](images/ghidra_pivot_main.png)
+![Ghidra analysis main](/images/ghidra_pivot_main.png)
 
 There isn't much to say about this function, it initializes the memory buffer where the bulk of the user input will be stored. If no error occurs, execution jumps to the `if_not_error` label, which is still part of `main()` and is shown below.
 
 Sub-section of `main()`:
 
-![Ghidra analysis main 2nd part](images/ghidra_pivot_main_2.png)
+![Ghidra analysis main 2nd part](/images/ghidra_pivot_main_2.png)
 
 This part initializes the pointer to the allocated memory region by adding a fixed offset every time the program is run, then uses this address as the storage location for the first input in `pwnme()`, before handling its return value afterwards.
 
 `pwnme():`
 
-![Ghidra analysis main](images/ghidra_pivot_pwnme.png)
+![Ghidra analysis main](/images/ghidra_pivot_pwnme.png)
 
 Let's take a look at the most interesting function in the program. It takes a pointer as a parameter `pwnme(*ptr)`  which is nothing more than the pointer to the memory region allocated in `main()`  as discussed in the previous section. Ghidra labels it `local_30`. The function first zeroes out the buffer for the upcoming input, then leaks the address of `local_30`, reads the first input into the pivot buffer, and finally prompts for a second input directly on the stack, with a buffer too small to contain it, leading to a buffer overflow, as in every ROPemporium challenge.
 
 `Gadgets`
 
-![Ghidra analysis main](images/ghidra_pivot_func_gadgets.png)
+![Ghidra analysis main](/images/ghidra_pivot_func_gadgets.png)
 
 This last screenshot shows the example function provided by the challenge, which conveniently contains the gadgets we are going to use:
 
