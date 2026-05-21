@@ -132,7 +132,7 @@ This part initializes the pointer to the allocated memory region by adding a fix
 
 Let's take a look at the most interesting function in the program. It takes a pointer as a parameter `pwnme(*ptr)`  which is nothing more than the pointer to the memory region allocated in `main()`  as discussed in the previous section. Ghidra labels it `local_30`. The function first zeroes out the buffer for the upcoming input, then leaks the address of `local_30`, reads the first input into the pivot buffer, and finally prompts for a second input directly on the stack, with a buffer too small to contain it, leading to a buffer overflow, as in every ROPemporium challenge.
 
-`Gadgets`
+`Gadgets & Example`
 
 ![Ghidra analysis main](/images/ghidra_pivot_func_gadgets.png)
 
