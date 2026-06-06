@@ -1,6 +1,6 @@
 ---
 title: "ROPemporium — ret2csu"
-date: 2026-06-5
+date: 2026-06-05
 ctf: "ROPemporium"
 category: "pwn"
 difficulty: "medium"
